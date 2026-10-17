@@ -1,0 +1,14 @@
+// Fixed real-title sample catalog. Posters are local TMDB promotional images.
+// Summaries are editorial paraphrases; dynamic TMDB ratings require live mode.
+export const demoGenres = ['Adventure', 'Animation', 'Comedy', 'Crime', 'Drama', 'Mystery', 'Science Fiction', 'Thriller']
+const entries = [
+  ['movie', 157336, 'Interstellar', '2014', ['Science Fiction', 'Adventure', 'Drama'], 'A journey beyond the familiar.', 'With Earth becoming uninhabitable, a former pilot joins a mission through a wormhole to search for humanity’s next home, leaving his family behind.', 'interstellar', '169 min'],
+  ['tv', 66732, 'Stranger Things', '2016', ['Mystery', 'Science Fiction', 'Drama'], 'Small town. Extraordinary secrets.', 'A boy’s disappearance draws his friends into a mystery involving secret experiments, an unusual young girl, and a dangerous world just beyond their own.', 'stranger-things', ''],
+  ['movie', 120467, 'The Grand Budapest Hotel', '2014', ['Comedy', 'Drama'], 'An extraordinary stay.', 'A devoted concierge and his young lobby boy become tangled in a stolen painting, a contested inheritance, and a spectacularly complicated escape.', 'grand-budapest', '100 min'],
+  ['tv', 1396, 'Breaking Bad', '2008', ['Crime', 'Drama', 'Thriller'], 'Every choice changes everything.', 'A chemistry teacher facing a cancer diagnosis partners with a former student to manufacture drugs. His attempt to provide for his family becomes a dangerous transformation.', 'breaking-bad', ''],
+  ['movie', 129, 'Spirited Away', '2001', ['Animation', 'Adventure'], 'Enter a world unlike any other.', 'After her parents are transformed in a mysterious spirit world, a young girl takes a job at a magical bathhouse and searches for a way to bring her family home.', 'spirited-away', '125 min'],
+  ['tv', 136315, 'The Bear', '2022', ['Comedy', 'Drama'], 'Something worth making.', 'A chef returns to Chicago to take over his late brother’s sandwich shop, confronting a chaotic kitchen, family grief, and his own relentless standards.', 'the-bear', ''],
+  ['movie', 27205, 'Inception', '2010', ['Science Fiction', 'Adventure', 'Thriller'], 'An idea can change everything.', 'A specialist in stealing secrets from dreams is offered a chance to return home. To earn it, his team must plant an idea deep inside another person’s mind.', 'inception', '148 min'],
+  ['tv', 100088, 'The Last of Us', '2023', ['Drama'], 'Find something to fight for.', 'In the aftermath of a devastating outbreak, a hardened survivor escorts a teenage girl across America, discovering an unexpected bond along the way.', 'last-of-us', ''],
+]
+export const catalog = entries.map(([type, id, title, year, genres, tagline, overview, art, duration]) => ({ type, id, title, year, genres, tagline, overview, poster: `/posters/${art}.jpg`, duration, rating: null, source: 'demo' }))

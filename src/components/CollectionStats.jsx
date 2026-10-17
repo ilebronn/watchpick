@@ -1,0 +1,3 @@
+export default function CollectionStats({ stats }) {
+  return <section className="collection-stats" aria-label="Your library statistics"><dl>{[[stats.saved, 'Saved for later'], [stats.watched, 'Watched'], [stats.favorites, 'Favorites'], [stats.movies, 'Movies'], [stats.series, 'TV series']].map(([count, label]) => <div key={label}><dt>{label}</dt><dd>{count}</dd></div>)}</dl><div className="library-progress"><label htmlFor="library-progress">Your library journey<span>{stats.progress}% watched</span></label><progress id="library-progress" value={stats.watched} max={stats.total || 1}/><small>Based on the titles in your saved and watched library.</small></div></section>
+}
